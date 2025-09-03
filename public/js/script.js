@@ -19,7 +19,7 @@
   }
 
   async function loadData(){
-    const res = await fetch('../data/ncm.json');
+    const res = await fetch('ncm.json');
     if(!res.ok) throw new Error('Falha ao carregar ncm.json');
     /** @type {{Codigo:string,Descricao:string,Data_Inicio:string,Data_Fim:string,Ato_Legal_Inicio:string,Numero:string|number,Ano:string|number}[]} */
     const data = await res.json();
